@@ -1,0 +1,65 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "ignorePatterns": [
+    ".eslintrc.js"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react"
+  ],
+  "root": true,
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off",
+    // allow jsx syntax in js files (for next.js project)
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".tsx",
+          ".ts"
+        ]
+      }
+    ], //should add ".ts" if typescript project
+    "no-unused-vars": "warn",
+    "prettier/prettier": [
+      "warn",
+      {
+        "trailingComma": "all",
+        "tabWidth": 2,
+        "semi": true,
+        "endOfLine": "lf",
+        "singleQuote": true,
+        "overrides": [
+          {
+            "files": "*.json",
+            "options": {
+              "tabWidth": 6
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
