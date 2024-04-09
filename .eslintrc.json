@@ -6,12 +6,16 @@
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
+    "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
   "ignorePatterns": [
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "**/*.mjs",
+    ".next",
+    "node_modules"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
@@ -43,23 +47,6 @@
       }
     ], //should add ".ts" if typescript project
     "no-unused-vars": "warn",
-    "prettier/prettier": [
-      "warn",
-      {
-        "trailingComma": "all",
-        "tabWidth": 2,
-        "semi": true,
-        "endOfLine": "lf",
-        "singleQuote": true,
-        "overrides": [
-          {
-            "files": "*.json",
-            "options": {
-              "tabWidth": 6
-            }
-          }
-        ]
-      }
-    ]
+    "prettier/prettier": "warn"
   }
 }
