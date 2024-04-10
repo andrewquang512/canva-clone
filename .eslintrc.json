@@ -48,6 +48,8 @@
       }
     ], //should add ".ts" if typescript project
     "no-unused-vars": "warn",
+    "no-prototype-builtins": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
     "prettier/prettier": [
       "warn",
