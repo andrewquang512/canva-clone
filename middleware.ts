@@ -2,7 +2,7 @@ import { authMiddleware } from '@clerk/nextjs';
 
 // Learn: Your Route Handler must be made public or ignored by Middleware to allow the request to succeed
 export default authMiddleware({
-  publicRoutes: ['/api/webhooks/clerk'],
+  publicRoutes: ['/', '/api/webhooks/clerk', '/api/webhooks/stripe'],
 });
 
 export const config = {
