@@ -123,6 +123,7 @@ const TransformationForm = ({
           if (newImage) {
             form.reset();
             setImage(data);
+            // Learn: Navigate to the provided href
             router.push(`/transformations/${newImage._id}`);
           }
         } catch (error) {
